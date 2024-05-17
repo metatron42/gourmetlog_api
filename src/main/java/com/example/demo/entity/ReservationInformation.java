@@ -19,20 +19,20 @@ public class ReservationInformation {
     private Integer storeReservationId;
 
 
-//    @ManyToOne
-//    @JoinColumn(name = "tusuario_nid_usuario", referencedColumnName = "nid_usuario")
-//    private UserInformation storeReservationUserId;
+    @ManyToOne
+    @JoinColumn(name = "tusuario_nid_usuario", referencedColumnName = "nid_usuario")
+    private UserInformation storeReservationUserId;
+
+    @ManyToOne
+    @JoinColumn(name = "testabelecimento_nid_estabelecimento", referencedColumnName = "nid_estabelecimento")
+    private EstablishmentInformation storeReservationEstablishmentId;
+
+
+//    @Column(name = "tusuario_nid_usuario")
+//    private Integer storeReservationUserId;
 //
-//    @ManyToOne
-//    @JoinColumn(name = "testabelecimento_nid_estabelecimento", referencedColumnName = "nid_estabelecimento")
-//    private EstablishmentInformation storeReservationEstablishmentId;
-
-
-    @Column(name = "tusuario_nid_usuario")
-    private Integer storeReservationUserId;
-
-    @Column(name = "testabelecimento_nid_estabelecimento")
-    private Integer storeReservationEstablishmentId;
+//    @Column(name = "testabelecimento_nid_estabelecimento")
+//    private Integer storeReservationEstablishmentId;
 
     @Column(name = "numpessoas_reserva")
     private String storeReservationCountPeople;
